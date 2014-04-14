@@ -5,16 +5,7 @@ group { 'puppet': ensure => 'present' }
 Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] } 
 
 $users = [
-    "yuriy",
-    "mariusz",
-    "pawel",
-    "maciej",
-    "wojciech",
-    "adam",
-    "macpro",
-    "artur",
-    "katarzyna",
-    "andrzej"
+    "kubek2k"
 ]
 
 define create_users {
