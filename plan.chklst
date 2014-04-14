@@ -1,0 +1,49 @@
++ + Unix basics
+  * Gdzie szukac pomocy
+    * man
+    * help
+  * System plikow
+    * poruszanie sie po systemie plikow
+      * cd
+      * ls
+      * df/du
+    * co gdzie jest
+      * /etc
+      * /bin
+      * /usr
+      * /var
+        * /log
+        * /run
+    * operacje na plikach
+      * cp
+      * rm 
+      * mv
+      * mc
+    * uprawnienia
+      * chmod 
+      * chown
+  * procesy
+    * ps
+    * kill
+    * top / htop
+  * praca z plikami tekstowymi
+    * pipes ( | )
+    * cat
+    * less 
+    * tail (-f/-F)
+    * head 
+    * grep (.*^$)
+  * szukanie plikow
+    * find
+      * daty
+      * wykonywanie czynnosci
+  * ssh
+    * scp (-R)
+    * keys
+  * siec
+    * /etc/hosts
+    * /etc/resolv.conf
+    * ifconfig (ip a)
+    * route (ip r)
+    * traceroute
+    * curl
