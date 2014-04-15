@@ -15,7 +15,7 @@ define create_users {
         managehome => "true",
     }
 
-    exec { 'set password':
+    exec { "set password for ${name}":
         command => "usermod -p '\$6\$QB2HYPCb\$Rce2CQBnF8CKLPDqLo4uycYGxqhzbOOFckM3UiXkFgvEwkR/vGaIKNFE3XJbwf9UbioNfL4pdPVunA/Y/FjNo0' ${name}",
         require => User[$name];
     }
@@ -25,20 +25,23 @@ define create_users {
             ensure => "present",
             recurse => "true",
             source => "/vagrant/homedir/documents",
+            require => User[$name],
     }
 
     file {
         "/home/${name}/ee-logs.tar.gz":
             ensure => "present",
             source => "/vagrant/homedir/ee-logs.tar.gz",
+            require => User[$name],
     }
 
     file {
         "/home/${name}/logs":
             ensure => "directory",
+            require => User[$name],
     }    
 
-    exec { 'untar shit':
+    exec { "untar shit ${name}":
             command => "tar -xzf /home/${name}/ee-logs.tar.gz -C /home/${name}/logs",
             require => File["/home/${name}/logs"],
     }
