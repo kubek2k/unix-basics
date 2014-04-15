@@ -20,13 +20,31 @@ define create_users {
         require => User[$name];
     }
 
-#    file {
- #       "/home/${name}/textfiles": 
-  #          ensure => "present",
-   #         recurse => "true",
-    #        source => "${settings::confdir}/homedir/textfiles"
-    #}
+    file {
+        "/home/${name}/documents": 
+            ensure => "present",
+            recurse => "true",
+            source => "/vagrant/homedir/documents",
+    }
+
+    file {
+        "/home/${name}/ee-logs.tar.gz":
+            ensure => "present",
+            source => "/vagrant/homedir/ee-logs.tar.gz",
+    }
+
+    file {
+        "/home/${name}/logs":
+            ensure => "directory",
+    }    
+
+    exec { 'untar shit':
+            command => "tar -xzf /home/${name}/ee-logs.tar.gz -C /home/${name}/logs",
+            require => File["/home/${name}/logs"],
+    }
 }
+
+
 create_users { $users: }
 
 package { "tmux": ensure => "installed" }
