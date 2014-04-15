@@ -1,1 +1,3 @@
 .vagrant
+homedir/documents/*
+*.swp
