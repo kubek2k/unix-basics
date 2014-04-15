@@ -1,10 +1,12 @@
 + + Unix basics
   * Gdzie szukac pomocy
     * man
+    * apropos
     * help
   * System plikow
     * poruszanie sie po systemie plikow
       * cd
+      * pwd
       * ls
       * df/du
     * co gdzie jest
@@ -18,6 +20,7 @@
       * cp
       * rm 
       * mv
+      * mkdir
       * mc
     * uprawnienia
       * chmod 
@@ -27,11 +30,11 @@
     * kill
     * top / htop
   * praca z plikami tekstowymi
-    * pipes ( | )
-    * cat
     * less 
+    * cat
     * tail (-f/-F)
     * head 
+    * pipe( | )
     * grep (.*^$)
   * szukanie plikow
     * find
@@ -46,4 +49,6 @@
     * ifconfig (ip a)
     * route (ip r)
     * traceroute
+    * netstat
+    * lsof
     * curl

@@ -1,0 +1,106 @@
++ + Unix basics
+  * Gdzie szukac pomocy
+    * man
+        - man ls
+        - man bash
+        - klawisze / i G
+    * help
+        - help help
+        - help export
+  * System plikow
+    * poruszanie sie po systemie plikow
+      * cd 
+        - co robi ..
+        - co robi .
+        - co robi /
+        - co robi - 
+      * pwd
+      * ls
+        - zwykly
+        - przelacznik -1
+        - przelacznik -a
+        - przelacznik -l
+      * df
+        - przelacznik -h
+      * du
+        - przelacznik -h
+        - przelacznik -d
+        - du -h /usr/lib
+        - du -h -d1 /usr/lib
+      * pushd/popd/dirs raczej jako ciekawostka
+    * co gdzie jest
+      * /etc
+        - ls /etc
+        - passwd/shadow
+      * /bin
+        - ls /bin
+      * /usr
+        - ls /usr
+      * /var
+        - ls /var
+        * /log
+            - ls /var/log
+            - dmesg
+        * /run
+            - ls /var/run
+    * operacje na plikach
+      * cp
+        - przelacznik -r
+        - powiedziec o slashu na koncu
+      * rm 
+        - przelacznik -r 
+        - przelacznik -f
+      * mv
+        - czesto szybszy niz cp
+        - uzywany do zmiany nazwy pliku
+      * mc
+    * uprawnienia
+      - ls -l
+        ls -l /var/log
+      * chmod 
+        - R 
+      * chown
+        - user
+        - user:group
+        - R
+  * procesy
+    * ps
+        - ps 
+        - ps a
+        - ps au
+        - ps aux
+    * kill
+    * top / htop
+  * praca z plikami tekstowymi
+    * pipes ( | )
+    * cat
+    * less (a,z,G)
+    * tail (-f/-F)
+        - pisanie do pliku w /tmp
+    * head 
+    * grep (.*^$)
+  * szukanie plikow
+    * find
+      * daty
+        - find logs -mtime 2
+        - find logs -mtime -2
+        - find logs -mtime +2
+      * wykonywanie czynnosci
+        - find . -mtime +2 -exec grep Exception {} \;
+        - find . -mtime +2 | xargs grep -iHn exception
+  * ssh
+    * scp (-R)
+    * keys
+  * siec
+    * /etc/hosts
+    * /etc/resolv.conf
+    * ifconfig (ip a)
+    * route (ip r)
+    * traceroute
+    * lsof
+        - lsof -n -i -P
+    * netstat
+        -t 
+        -u 
+        -n
+    * curl
